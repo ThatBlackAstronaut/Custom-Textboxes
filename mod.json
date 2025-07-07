@@ -1,0 +1,53 @@
+{
+	"geode": "4.6.1",
+	"gd": {
+		"win": "2.2074",
+		"mac": "2.2074"
+	},
+	"id": "colon.customtextboxes",
+	"name": "Custom Textboxes",
+	"version": "v1.0.0",
+	"developer": "Colon",
+	"description": "Display custom popups, chests, and more",
+	"resources": {
+		"files": ["defaults/*.json"]
+	},
+	"dependencies": {
+		"geode.node-ids": { "version": ">=1.20.0", "importance": "required" },
+		"geode.texture-loader": { "version": ">=1.7.0", "importance": "suggested" }
+	},
+	"settings": {
+		"key_popup": {
+			"type": "custom:keybind",
+			"name": "Popup keybind",
+			"description": "Press this key to spawn the popup defined in <cy>custom_popups.json</c>\n\n<cg>Shift + this key</c> will queue the popup\n<cg>Alt + this key</c> will spawn the secondary one.",
+			"default": 36
+		},
+		"key_dialogue": {
+			"type": "custom:keybind",
+			"name": "Dialogue keybind",
+			"description": "Press this key to spawn the dialogue box defined in <cy>custom_dialogues.json</c>\n\n<cg>Shift + this key</c> will queue the dialogue\n<cg>Alt + this key</c> will spawn the secondary one.",
+			"default": 33
+		},
+		"key_chest": {
+			"type": "custom:keybind",
+			"name": "Chest keybind",
+			"description": "Press this key to spawn the chest defined in <cy>custom_chests.json</c>\n\n<cg>Shift + this key</c> will queue the chest\n<cg>Alt + this key</c> will spawn the secondary one.",
+			"default": 45
+		},
+
+
+		"missingIDWarn": {
+            "name": "Warn when missing ID",
+            "description": "Displays a warning popup when trying to spawn a textbox with an ID that hasn't been defined",
+            "type": "bool",
+			"default": true
+        },
+		"shiftSound": {
+            "name": "Queue sound effect",
+            "description": "Plays a sound effect when a textbox is successfully queued up (by holding SHIFT)",
+            "type": "bool",
+			"default": false
+        }
+	}
+}
