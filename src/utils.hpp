@@ -160,6 +160,18 @@ inline std::string getKey(matjson::Value data, char const* key, std::map<std::st
     else return fallback;
 }
 
+inline ccColor3B getColor(matjson::Value data, char const* key = "color", ccColor3B fallback = ccWHITE) {
+    ccColor3B col = fallback;
+    auto arr = data[key].asArray();
+    if (arr) {
+        auto x = arr.unwrap();
+        col.r = x[0].asInt().unwrapOr(0);
+        col.g = x[1].asInt().unwrapOr(0);
+        col.b = x[2].asInt().unwrapOr(0);
+    }
+    return col;
+}
+
 // Gets a custom texture from both spritesheets and the resources folder
 inline CCSprite* getCustomTexture(char const* frame, char const* fallback, bool fallbackIsResource = false) {
     // Search spritesheets

@@ -213,13 +213,7 @@ void customizeText(CCLabelBMFont* text, matjson::Value data) {
     }
 
     if (data.contains("color")) {
-        ccColor3B col = text->getColor();
-        auto arr = data["color"].asArray();
-        if (arr) {
-            auto x = arr.unwrap();
-            col = ccColor3B(x[0].asInt().unwrapOr(0), x[1].asInt().unwrapOr(0), x[2].asInt().unwrapOr(0));
-        }
-        text->setColor(col);
+        text->setColor(getColor(data, "color", text->getColor()));
     }
 
     if (data.contains("scale")) {
@@ -240,13 +234,7 @@ void customizeText(TextArea* text, matjson::Value data) {
     }
 
     if (data.contains("color")) {
-        ccColor3B col = ccWHITE;
-        auto arr = data["color"].asArray();
-        if (arr) {
-            auto x = arr.unwrap();
-            col = ccColor3B(x[0].asInt().unwrapOr(0), x[1].asInt().unwrapOr(0), x[2].asInt().unwrapOr(0));
-        }
-        text->colorAllLabels(col);
+        text->setColor(getColor(data));
     }
 
     if (data.contains("scale")) {

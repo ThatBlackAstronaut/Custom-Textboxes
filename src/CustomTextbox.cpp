@@ -153,14 +153,7 @@ void CustomTextbox::showTextbox(std::string id) {
     matjson::Value messageList = data["messages"].asArray().unwrap();
     
     for (auto m : messageList) {
-        ccColor3B col = ccWHITE;
-        if (m.contains("nameColor")) {
-            auto arr = m["nameColor"].asArray();
-            if (arr) {
-                auto x = arr.unwrap();
-                col = ccColor3B(x[0].asInt().unwrapOr(0), x[1].asInt().unwrapOr(0), x[2].asInt().unwrapOr(0));
-            }
-        }
+        ccColor3B col = getColor(m, "nameColor");
 
         std::string content = getStr(m, "content", "");
         if (!content.empty()) {
