@@ -1,0 +1,28 @@
+{
+    "to-show": "chest_example",
+    "to-show-alt": "bigbooms",
+
+    "chest_example": {
+        "type": "100key",
+        "hideStats": true,
+        "rewards": [
+            { "iconID": 433 },
+            { "type": "orbs", "amount": 3000 },
+            { "type": "diamond", "amount": 200 },
+            { "type": "key", "amount": 3 }
+        ]
+    },
+
+    "bigbooms": {
+        "type": "gold",
+        "hideStats": true,
+        "openSound": "sfx/s1740.ogg",
+        "rewards": [
+            { "iconID": 20, "iconType": "deathEffect" },
+            { "iconID": 20, "iconType": "deathEffect" },
+            { "iconID": 20, "iconType": "deathEffect" },
+            { "iconID": 20, "iconType": "deathEffect" },
+            { "iconID": 20, "iconType": "deathEffect" }
+        ]
+    }
+}

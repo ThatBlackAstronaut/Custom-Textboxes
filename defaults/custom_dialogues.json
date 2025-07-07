@@ -1,0 +1,67 @@
+{
+    "to-show": "scratch",
+    "to-show-alt": "wraith",
+
+    "scratch": {
+        "background": "blue",
+        "messages": [
+            {
+                "name": "Scratch",
+                "content": "What up,<d020> I'm <cl>Scratch</c>.",
+                "icon": 10
+            },
+            {
+                "name": "Scratch",
+                "content": "You can make me say anything you want!",
+                "icon": 52
+            },
+            {
+                "name": "Scratch",
+                "content": "Spawn this dialogue while holding ALT for a fancier example!",
+                "icon": 8
+            }
+        ]
+    },
+
+    "wraith": {
+        "background": "darkblue",
+        "position": "top",
+        "messages": [
+            {
+                "name": "Wraith",
+                "nameColor": [200, 128, 255],
+                "content": "Hey it's me, <cr>The Wraith</c>.",
+                "icon": 53,
+                "textSound": "sfx/s474.ogg"
+            },
+            {
+                "name": "Wraith",
+                "nameColor": [200, 128, 255],
+                "content": "You're not <cg>gullible</c>,<d030> are you?",
+                "icon": 55,
+                "textSound": "sfx/s474.ogg"
+            },
+            {
+                "name": "Wraith",
+                "nameColor": [200, 128, 255],
+                "content": "Oh,<d020> you're <cy><username></c>?",
+                "icon": 54,
+                "textSound": "sfx/s474.ogg",
+                "pauseMusic": true
+            },
+            {
+                "name": "Wraith",
+                "nameColor": [200, 128, 255],
+                "content": "Carry on then<...>",
+                "icon": 56,
+                "scale": 0.6,
+                "textSound": { "name": "sfx/s474.ogg", "volume": 0.5, "speed": -2 },
+                "pauseMusic": false
+            }
+        ],
+        "onComplete": {
+            "playSound": { "name": "secretKey.ogg", "speed": -1 },
+            "spawnIcon": { "id": 92, "type": "wave" }
+        }
+    }
+}

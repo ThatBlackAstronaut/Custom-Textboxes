@@ -65,6 +65,5 @@ build-*/
 
 # for me lol
 old/
-defaults/
 *.txt
 !CMakeLists.txt
