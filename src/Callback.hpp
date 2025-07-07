@@ -19,7 +19,7 @@ class CallerBackerInator {
             if (data.isArray()) {
                 auto arr = data.asArray().unwrap();
                 int idx = static_cast<ObjWrapper<int>*>(node->getUserObject("customAlertCallbackIndex"_spr))->getValue();
-                idx = clamp(idx, 0, arr.size() - 1);
+                idx = std::clamp(idx, 0, (int)(arr.size() - 1));
                 data = arr[idx];
 
                 int newIndex = getInt(data, "goto", idx + 1);

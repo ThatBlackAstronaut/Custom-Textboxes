@@ -10,12 +10,12 @@
 
 struct CustomDialogData {
     std::string customTexture = "";
-    double iconScale = 1.0f;
+    float iconScale = 1.0f;
     matjson::Value customSound = nullptr;
     matjson::Value blipSound = nullptr;
     matjson::Value changeBG = nullptr;
     bool autoSkip = false;
-    byte pauseMusic = 0;  // 0 = ignore, 1 = unpause, 2 = pause
+    Toggler pauseMusic = Toggler::Default;
 };
 std::map<int, CustomDialogData> storedCustomData;
 
@@ -66,7 +66,7 @@ class $modify(CustomDialogLayer, DialogLayer) {
         if (data.customSound != nullptr) playCustomSound(data.customSound);
 
         // Pause music
-        if (data.pauseMusic > 0) FMODAudioEngine::sharedEngine()->m_backgroundMusicChannel->setPaused(data.pauseMusic == 2);
+        if (data.pauseMusic != Toggler::Default) FMODAudioEngine::sharedEngine()->m_backgroundMusicChannel->setPaused(data.pauseMusic == Toggler::On);
 
         // Auto skip
         if (data.autoSkip) m_fields->autoSkip = true;
@@ -187,9 +187,9 @@ void CustomTextbox::showTextbox(std::string id) {
         if (m.contains("setBackground")) data.changeBG = m["setBackground"];
         if (m.contains("autoSkip")) data.autoSkip = getBool(m, "autoSkip");
         if (m.contains("pauseMusic")) {
-            byte pauseByte = getBool(m, "pauseMusic") ? 2 : 1;
-            data.pauseMusic = pauseByte; 
-            if (pauseByte == 2) pausesMusic = true;
+            Toggler pauseVal = getBool(m, "pauseMusic") ? Toggler::On : Toggler::Off;
+            data.pauseMusic = pauseVal; 
+            if (pauseVal == Toggler::On) pausesMusic = true;
         }
         customData[dialogLines->count()] = data;
 

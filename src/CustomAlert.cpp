@@ -294,7 +294,7 @@ void customizeButton(CCMenuItemSpriteExtra* buttonBase, CCObject* parent, matjso
     }
 
     auto size = button->getContentSize();
-    float w = getNum(data, "width", clamp(label->getContentWidth() + 14.0f, size.width, 150.0f));
+    float w = getNum(data, "width", std::clamp(label->getContentWidth() + 14.0f, size.width, 150.0f));
     float h = getNum(data, "height", size.height);
 
     CCScale9Sprite* slice = button->getChildByType<CCScale9Sprite>(0);

@@ -19,6 +19,10 @@ struct SoundData {
     float speed = 1.0f;
 };
 
+enum Toggler {
+    Default, Off, On
+};
+
 inline std::map<std::string, int> TEXTBOX_COLORS = {
     { "brown", 1 },
     { "blue", 2 },
