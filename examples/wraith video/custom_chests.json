@@ -1,0 +1,26 @@
+{
+    "to-show": "wraith_empty",
+    "to-show-alt": "wraith_orb",
+
+    "wraith_empty": {
+        "type": "gold",
+        "hideStats": true,
+        "rewards": [],
+        "openSound": "sfx/rizz.wav",
+        "onClaim": {
+            "delay": 0.25,
+            "spawnDialogue": "wraith_chest"
+        }
+    },
+
+    "wraith_orb": {
+        "type": "small",
+        "rewards": [
+            { "type": "orb", "amount": 1 }
+        ],
+        "onClaim": {
+            "delay": 0.25,
+            "spawnDialogue": "wraith_orb"
+        }
+    }
+}

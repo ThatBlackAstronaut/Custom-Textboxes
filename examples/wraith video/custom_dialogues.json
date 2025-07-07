@@ -1,0 +1,789 @@
+{
+    "to-show": "wraith",
+    "to-show-alt": "rattledash",
+
+    "rattledash": {
+        "background": "darkblue",
+        "messages": [
+            {
+                "customIcon": "portraits/rattledash_1.png",
+                "name": "Rattledash",
+                "content": "Hey!<d020> Long time no see, <co>friend</c>."
+            },
+            {
+                "customIcon": "portraits/rattlehead_1.png",
+                "name": "Rattledash",
+                "content": "I've been <cl>snooping around</c>, and I think I found something rather <cg>interesting</c><...>"
+            },
+            {
+                "customIcon": "portraits/rattledash_2.png",
+                "name": "Rattledash",
+                "content": "Have you seen a <ca>creepy purple guy</c> anywhere around here?"
+            },
+            {
+                "customIcon": "portraits/rattledash_2.png",
+                "name": "Rattledash",
+                "scale": 0.75,
+                "content": "He's got a <cl>deep voice</c><...> wears a <cl>lock</c> around his neck<...> is kind of shaped like the <cr>Cursed Thorn</c><...>"
+            },
+            {
+                "customIcon": "portraits/rattlehead_1.png",
+                "name": "Rattledash",
+                "content": "Do you know who I'm talking about?"
+            }
+       ],
+       "onComplete": {
+        "spawnPopup": "rattledash_question"
+       }
+    },
+
+    "rattledash_yes": {
+        "background": "darkblue",
+        "messages": [
+            {
+                "customIcon": "portraits/rattledash_1.png",
+                "name": "Rattledash",
+                "content": "Amazing!"
+            },
+            {
+                "customIcon": "portraits/rattlehead_1.png",
+                "name": "Rattledash",
+                "content": "Now listen carefully, because I'm only going to tell you this <cl>once</c>..."
+            },
+            {
+                "customIcon": "portraits/rattlehead_1.png",
+                "name": "Rattledash",
+                "content": "<cg>The next time you come across this person...</c>",
+                "setBackground": "darkpurple"
+            },
+            {
+                "customIcon": "portraits/rattlehead_1.png",
+                "name": "Rattledash",
+                "content": "<cg>Whisper my name to him.</c>"
+            },
+            {
+                "customIcon": "portraits/rattlehead_1.png",
+                "name": "Rattledash",
+                "content": "<cg>He'll know what to do.</c>"
+            },
+            {
+                "customIcon": "portraits/rattledash_2.png",
+                "name": "Rattledash",
+                "content": "<...>",
+                "setBackground": "darkblue"
+            },
+            {
+                "customIcon": "portraits/rattledash_2.png",
+                "name": "Rattledash",
+                "content": "Nobody's watching us, right?"
+            }
+        ],
+        "onComplete": { "playSound": "sfx/ominous.wav" }
+    },
+
+    "rattledash_no_1": {
+        "background": "darkblue",
+        "position": "top",
+        "messages": [
+            {
+                "customIcon": "portraits/rattledash_2.png",
+                "name": "Rattledash",
+                "content": "Are you sure?"
+            },
+            {
+                "customIcon": "portraits/wraith_silhouette.png",
+                "name": "Rattledash",
+                "content": "He sorta looks like <cl>this</c><...>"
+            }
+        ]
+    },
+
+    "rattledash_no_2": {
+        "background": "darkblue",
+        "messages": [
+            {
+                "customIcon": "portraits/rattlehead_1.png",
+                "name": "Rattledash",
+                "content": "Oh well."
+            },
+            {
+                "customIcon": "portraits/rattlehead_2.png",
+                "name": "Rattledash",
+                "content": "<cg>Another time then.</c>"
+            }
+        ],
+        "onComplete": { "playSound": "sfx/ominousnt.wav" }
+    },
+
+    "wraith": {
+        "background": "purple",
+        "messages": [
+            {
+                "icon": 54,
+                "name": "The Wraith",
+                "content": "How curious<...>"
+            },
+            {
+                "icon": 53,
+                "name": "The Wraith",
+                "content": "That name seems<...> <cr>familiar</c><...> but I can't remember why."
+            },
+            {
+                "icon": 56,
+                "name": "The Wraith",
+                "content": "Well, I suppose I should prepare another <cy>reward</c> for you."
+            }
+        ],
+        "onComplete": {
+            "spawnChest": "wraith_empty"
+        }
+    },
+
+    "wraith_chest": {
+        "background": "purple",
+        "messages": [
+            {
+                "icon": 54,
+                "name": "The Wraith",
+                "content": "<cr>No, something's definitely not right.</c>"
+            },
+            {
+                "icon": 55,
+                "name": "The Wraith",
+                "content": "Who is <cl>Rattledash</c>?<d020> <cr>I must know.</c>"
+            }
+        ],
+        "onComplete": {
+            "spawnPopup": "who_is_rattledash"
+        }
+    },
+
+    "wraith_rattledash": {
+        "background": "purple",
+        "messages": [
+            {
+                "icon": 56,
+                "sound": {"name": "sfx/s13587.ogg", "volume": 0.5, "speed": 4},
+                "name": "The Wraith",
+                "content": "Wait, it's <cr>that guy</c>?<d040> The skeleton?"
+            },
+            {
+                "icon": 55,
+                "name": "The Wraith",
+                "content": "<cr>I swore I would destroy him once and for all<...></c>"
+            },
+            {
+                "customIcon": "portraits/wraith_close.png",
+                "setBackground": "darkblue",
+                "name": "The Wraith",
+                "nameColor": [255, 160, 160],
+                "content": "<cr>AND NOW I'M GOING TO</c> <cr><s100>DESTROY</s> YOU TOO!!!</c>"
+            },
+            {
+                "icon": 55,
+                "name": "The Wraith",
+                "nameColor": [255, 160, 160],
+                "sound": {"name": "sfx/s7243.ogg", "speed": 0, "volume": 0.66},
+                "content": "<cr><s100>COME FORTH, MY MINION!</s></c>"
+            },
+            {
+                "icon": 15,
+                "setBackground": "purple",
+                "name": "...",
+                "content": "What's up, boss?"
+            },
+            {
+                "customIcon": "portraits/monster_smug.png",
+                "setBackground": "purple",
+                "name": "...",
+                "pauseMusic": true,
+                "content": "Oh, it's this guy!"
+            },
+            {
+                "icon": 16,
+                "name": "...",
+                "content": "Nah, he freed me from that basement.<d030> We're <cg>homies</c>."
+            },
+            {
+                "icon": 55,
+                "name": "The Wraith",
+                "pauseMusic": false,
+                "content": "<cr>You <s100>IDIOT!</s></c> Do we have any other guards here?"
+            },
+            {
+                "icon": 48,
+                "setBackground": "blue",
+                "name": "Diamond Shopkeeper",
+                "content": "<cl>glORp!</c>"
+            },
+            {
+                "icon": 53,
+                "setBackground": "purple",
+                "name": "The Wraith",
+                "pauseMusic": true,
+                "sound": { "name": "sfx/recordscratch.wav", "volume": 0.6 },
+                "content": "Okay maybe not that guy."
+            },
+            {
+                "customIcon": "portraits/monster_smug.png",
+                "name": "...",
+                "content": "Hate that guy.<d080> We should kill him."
+            }
+        ],
+        "onComplete": {
+            "spawnPopup": "kill_diamond"
+        }
+    },
+
+    "wraith_portal": {
+        "background": "purple",
+        "messages": [
+            {
+                "icon": 16,
+                "name": "...",
+                "content": "Hey, I could always try opening the <cp>portal</c> again!"
+            },
+            {
+                "icon": 16,
+                "name": "...",
+                "content": "Maybe it will teleport more minions to us."
+            },
+            {
+                "icon": 54,
+                "name": "The Wraith",
+                "scale": 0.8,
+                "content": "You mean the <cy>multidimensional portal</c> that RubRub told us not to mess with?"
+            },
+            {
+                "icon": 16,
+                "name": "...",
+                "content": "Yeah, what could possibly go wrong?"
+            },
+            {
+                "icon": 16,
+                "name": "...",
+                "content": "<cg>Boop!</c>",
+                "sound": "sfx/bubblybutton.ogg"
+            },
+            {
+                "icon": 0,
+                "name": "",
+                "setBackground": "darkpurple",
+                "content": "<cp><i050>(portal noises)</i></c> <d400>",
+                "unskippable": true,
+                "autoSkip": true,
+                "sound": "sfx/nether.mp3"
+            },
+            {
+                "setBackground": "purple",
+                "icon": 56,
+                "name": "The Wraith",
+                "content": "Well,<d020> did it work?"
+            },
+            {
+                "icon": 16,
+                "name": "...",
+                "content": "Look, here come some people!"
+            }
+        ],
+        "onComplete": {
+            "delay": 0.5,
+            "spawnDialogue": "wraith_deltarune"
+        }
+    },
+
+    "wraith_deltarune": {
+        "background": "borders/deltarune.png",
+        "messages": [
+            {
+                "name": "Susie",
+                "content": "Uhhhhhh...",
+                "customIcon": "portraits/susie_surprised.png",
+                "textSound": "blips/susie.wav"
+            },
+            {
+                "name": "Susie",
+                "content": "Kris?<d060> Where the <cr>hell</c> are we?",
+                "customIcon": "portraits/susie_furious.png",
+                "sound": "sfx/deltawhip.wav",
+                "textSound": "blips/susie.wav"
+            },
+            {
+                "name": "Ralsei",
+                "content": "I've never seen a <cl>Dark World</c> like this before<...>",
+                "customIcon": "portraits/ralsei_worried.png",
+                "textSound": "blips/ralsei.wav"
+            },
+            {
+                "name": "Lancer",
+                "content": "Ho ho ho!!!<d050> We're in <cy>Geometry Dash</c>!",
+                "customIcon": "portraits/lancer_handsome.png",
+                "textSound": "blips/lancer.wav",
+                "sound": "sfx/splat.wav"
+            },
+            {
+                "name": "Ralsei",
+                "content": "Geometry Dash?",
+                "customIcon": "portraits/ralsei_wtf.png",
+                "textSound": "blips/ralsei.wav"
+            },
+            {
+                "name": "Lancer",
+                "content": "That's the game!",
+                "customIcon": "portraits/lancer.png",
+                "textSound": "blips/lancer.wav"
+            },
+            {
+                "name": "Susie",
+                "content": "Sounds stupid.",
+                "customIcon": "portraits/susie_smug.png",
+                "textSound": "blips/susie.wav"
+            },
+            {
+                "setBackground": "purple",
+                "icon": 15,
+                "name": "...",
+                "scale": 0.6,
+                "content": "Uhhhh, <ca>Wraith</c>?<d050> Do you know these guys?"
+            },
+            {
+                "icon": 54,
+                "name": "The Wraith",
+                "scale": 0.6,
+                "content": "Never seen them in my life."
+            },
+            {
+                "setBackground": "borders/deltarune.png",
+                "name": "Ralsei",
+                "content": "...so it's not a game about math?",
+                "customIcon": "portraits/ralsei.png",
+                "textSound": "blips/ralsei.wav"
+            },
+            {
+                "name": "Susie",
+                "scale": 0.8,
+                "content": "Man, why couldn't we get a game where you defeat demons or something?",
+                "customIcon": "portraits/susie_sigh.png",
+                "textSound": "blips/susie.wav"
+            },
+            {
+                "name": "Lancer",
+                "content": "Well, about that<...>",
+                "customIcon": "portraits/lancer.png",
+                "textSound": "blips/lancer.wav"
+            },
+            {
+                "setBackground": "purple",
+                "icon": 53,
+                "name": "The Wraith",
+                "content": "Hey, I guess you can turn the <cp>portal</c> off now."
+            },
+            {
+                "icon": 16,
+                "name": "...",
+                "content": "Sure thing, boss."
+            },
+            {
+                "customIcon": "portraits/monster_smug.png",
+                "scale": 0.6,
+                "name": "...",
+                "content": "<d100>Uhhhhhhhhhhh..."
+            },
+            {
+                "customIcon": "portraits/monster_smug.png",
+                "scale": 0.6,
+                "pauseMusic": true,
+                "name": "...",
+                "content": "It won't turn off.",
+                "sound": { "name": "sfx/boowomp.wav", "volume": 0.6 }
+            },
+            {
+                "icon": 54,
+                "name": "The Wraith",
+                "content": "What?"
+            },
+            {
+                "customIcon": "portraits/monster_smug.png",
+                "name": "...",
+                "content": "It just won't."
+            },
+            {
+                "icon": 53,
+                "name": "The Wraith",
+                "pauseMusic": false,
+                "content": "Crap, <cl>more people</c> are coming in!"
+            },
+            {
+                "setBackground": "brown",
+                "customIcon": "portraits/wulzy.png",
+                "name": "Wulzy",
+                "content": "<i050><cy>Woah!</c></i>",
+                "sound": "sfx/woah.wav"
+            },
+            {
+                "customIcon": "portraits/wulzy.png",
+                "name": "Wulzy",
+                "content": "Am I inside Geometry Dash?",
+                "textSound": "blips/wulzy.wav"
+            },
+            {
+                "customIcon": "portraits/wulzy.png",
+                "name": "Wulzy",
+                "content": "That's brilliant! I'm chuffed to bits.",
+                "textSound": "blips/wulzy.wav"
+            },
+            {
+                "setBackground": "purple",
+                "icon": 54,
+                "name": "The Wraith",
+                "scale": 0.6,
+                "content": "oh my days it's a british person"
+            },
+            {
+                "icon": 15,
+                "name": "...",
+                "content": "Well this is <cr>just great</c><...>"
+            },
+            {
+                "setBackground": "brown",
+                "customIcon": "portraits/wulzy.png",
+                "name": "Wulzy",
+                "content": "Oh sweet, something to drink!",
+                "textSound": "blips/wulzy.wav"
+            },
+            {
+                "setBackground": "borders/deltarune.png",
+                "name": "Water Cooler",
+                "content": "bebie",
+                "customIcon": "portraits/watercooler.png",
+                "textSound": "blips/ut.wav"
+            },
+            {
+                "setBackground": "borders/spoon.png",
+                "name": "Spoon",
+                "content": "######################",
+                "customIcon": "portraits/spoon.png",
+                "textSound": "blips/spoon.wav"
+            },
+            {
+                "setBackground": "borders/pjsk.png",
+                "name": "Emu",
+                "content": "Hello!",
+                "customIcon": "portraits/emu.png",
+                "sound": "sfx/emu_hello.wav"
+            },
+            {
+                "setBackground": "blue",
+                "name": "Freaky Rattledash",
+                "nameColor": [255, 180, 60],
+                "content": "Check your mailbox.",
+                "customIcon": "portraits/rattledash_evil.png"
+            },
+            {
+                "setBackground": "brown",
+                "name": "Peter",
+                "content": "Hey Lois, I'm in Geometry Dash!",
+                "customIcon": "portraits/peter.png",
+                "textSound": "blips/peter.wav"
+            },
+            {
+                "setBackground": "borders/deltarune.png",
+                "name": "The original      Starwalker ",
+                "content": "I am also         <d030><cy>here</c>",
+                "customIcon": "portraits/starwalker.png",
+                "textSound": "blips/ut.wav"
+            },
+            {
+                "setBackground": "purple",
+                "icon": 15,
+                "name": "...",
+                "content": "There's so many of them!"
+            },
+            {
+                "icon": 54,
+                "name": "The Wraith",
+                "content": "Aren't you gonna do something about this, <cy><username></c>?"
+            }
+        ],
+        "onComplete": {
+            "spawnPopup": "wraith_help"
+        }
+    },
+
+    "wraith_wtf": {
+        "background": "purple",
+        "messages": [
+            {
+                "icon": 54,
+                "name": "The Wraith",
+                "content": "Wait a minute<...>"
+            },
+            {
+                "icon": 55,
+                "name": "The Wraith",
+                "content": "<cr>I know what's going on here.</c>"
+            },
+            {
+                "setBackground": "borders/deltarune.png",
+                "name": "Water Cooler",
+                "content": "bible",
+                "customIcon": "portraits/watercooler.png",
+                "textSound": "blips/ut.wav"
+            },
+            {
+                "setBackground": "purple",
+                "icon": 53,
+                "name": "The Wraith",
+                "content": "We're inside a <cg>mod showcase</c>."
+            },
+            {
+                "icon": 15,
+                "name": "...",
+                "content": "Say what?"
+            },
+            {
+                "setBackground": "purple",
+                "icon": 53,
+                "name": "The Wraith",
+                "scale": 0.8,
+                "content": "This is all just a showcase of the <cy>Custom Textboxes</c> mod.<d020> And the stuff it can do."
+            },
+            {
+                "setBackground": "borders/deltarune.png",
+                "name": "Ralsei",
+                "content": "Oh, that sounds really cool!",
+                "customIcon": "portraits/ralsei.png",
+                "textSound": "blips/ralsei.wav"
+            },
+            {
+                "name": "Susie",
+                "content": "Wait, we're not real?",
+                "customIcon": "portraits/susie_surprised.png",
+                "textSound": "blips/susie.wav"
+            },
+            {
+                "setBackground": "purple",
+                "icon": 54,
+                "name": "The Wraith",
+                "content": "Yeah, this was all programmed by some <co>fox boy</c>."
+            },
+            {
+                "setBackground": "borders/undertale.png",
+                "name": "Ceroba",
+                "content": "Actually, my pronouns are-",
+                "autoSkip": true,
+                "customIcon": "portraits/ceroba.png",
+                "textSound": "blips/ceroba.wav"
+            },
+            {
+                "setBackground": "purple",
+                "icon": 55,
+                "name": "The Wraith",
+                "sound": "sfx/deltawhip.wav",
+                "content": "<cr><s100>EVERYONE SHUT UP!</s></c>"
+            },
+            {
+                "icon": 54,
+                "name": "The Wraith",
+                "content": "We need to come up with a <cg>plan</c>."
+            },
+            {
+                "setBackground": "brown",
+                "customIcon": "portraits/wulzy.png",
+                "name": "Wulzy",
+                "content": "We could do a <cy>level swap</c>!",
+                "textSound": "blips/wulzy.wav"
+            },
+            {
+                "setBackground": "borders/deltarune.png",
+                "name": "Susie",
+                "content": "Hey, I'm down.",
+                "customIcon": "portraits/susie_smile.png",
+                "textSound": "blips/susie.wav"
+            },
+            {
+                "setBackground": "darkblue",
+                "customIcon": "portraits/rattledash_1.png",
+                "name": "Rattledash",
+                "pauseMusic": true,
+                "content": "Or you could give <cy><username></c> their reward<...>"
+            },
+            {
+                "setBackground": "purple",
+                "icon": 55,
+                "name": "The Wraith",
+                "sound": "sfx/s7295.ogg",
+                "content": "<cr><s100>YOU!!!</s></c>"
+            },
+            {
+                "setBackground": "darkblue",
+                "customIcon": "portraits/rattlehead_1.png",
+                "name": "Rattledash",
+                "content": "They typed the code, didn't they?"
+            },
+            {
+                "setBackground": "darkblue",
+                "customIcon": "portraits/rattlehead_1.png",
+                "name": "Rattledash",
+                "content": "That means you owe them a <cy>reward</c>.<d030> A real one."
+            },
+            {
+                "setBackground": "purple",
+                "icon": 56,
+                "name": "The Wraith",
+                "scale": 0.6,
+                "content": "<i100>*sigh*</i>"
+            },
+            {
+                "icon": 53,
+                "name": "The Wraith",
+                "pauseMusic": false,
+                "content": "What <cy>reward</c> would you like?"
+            }
+        ],
+        "onComplete": {
+            "spawnPopup": "choose_reward"
+        }
+    },
+
+    "wraith_orb": {
+        "background": "purple",
+        "messages": [
+            {
+                "icon": 54,
+                "name": "The Wraith",
+                "content": "There, are you happy?"
+            },
+            {
+                "icon": 16,
+                "name": "...",
+                "content": "Don't spend it all in one place."
+            },
+            {
+                "setBackground": "darkblue",
+                "customIcon": "portraits/rattledash_1.png",
+                "name": "Rattledash",
+                "content": "I suppose it's time for you to go."
+            },
+            {
+                "setBackground": "darkblue",
+                "customIcon": "portraits/rattledash_3.png",
+                "name": "Rattledash",
+                "content": "Sorry for dragging you into all of this."
+            },
+            {
+                "setBackground": "borders/deltarune.png",
+                "name": "Ralsei",
+                "content": "So long!!!",
+                "customIcon": "portraits/ralsei.png",
+                "textSound": "blips/ralsei.wav"
+            },
+            {
+                "setBackground": "brown",
+                "customIcon": "portraits/wulzy.png",
+                "name": "Wulzy",
+                "content": "Have a good day!",
+                "textSound": "blips/wulzy.wav"
+            },
+            {
+                "setBackground": "purple",
+                "icon": 54,
+                "name": "The Wraith",
+                "content": "Let's never speak of this ever again."
+            },
+            {
+                "customIcon": "portraits/monster_smug.png",
+                "name": "...",
+                "content": "So real."
+            },
+            {
+                "setBackground": "borders/deltarune.png",
+                "name": "The original      Starwalker ",
+                "content": "<cy>Star<d040> Walker</c>",
+                "customIcon": "portraits/starwalker.png",
+                "textSound": "blips/ut.wav"
+            },
+            {
+                "setBackground": "purple",
+                "icon": 53,
+                "name": "The Wraith",
+                "content": "Okay see you around."
+            }
+        ],
+        "onComplete": {
+            "spawnPopup": "the_end",
+            "playSound": { "name": "sfx/explosion.wav", "volume": 0.6 }
+        }
+    },
+
+    "reward_you_1": {
+        "background": "purple",
+        "messages": [
+            {
+                "icon": 54,
+                "name": "The Wraith",
+                "content": "Uhhhh.....<d040> <cr>what?</c>"
+            },
+            {
+                "icon": 53,
+                "name": "The Wraith",
+                "content": "What does that even mean?"
+            }
+        ]
+    },
+
+    "reward_you_2": {
+        "background": "purple",
+        "messages": [
+            {
+                "icon": 56,
+                "name": "The Wraith",
+                "content": "I-I don't understand<...>"
+            },
+            {
+                "customIcon": "portraits/monster_smug.png",
+                "name": "...",
+                "content": "It means they want you."
+            },
+            {
+                "icon": 54,
+                "name": "The Wraith",
+                "content": "Wha-???"
+            }
+        ]
+    },
+
+    "reward_you_3": {
+        "background": "purple",
+        "messages": [
+            {
+                "icon": 54,
+                "name": "The Wraith",
+                "content": "Stay away from me, you <cr>freak</c>!"
+            },
+            {
+                "icon": 16,
+                "name": "...",
+                "sound": { "name": "sfx/rizz.wav", "volume": 0.7 },
+                "content": "Hey, I'll take them instead."
+            },
+            {
+                "icon": 55,
+                "name": "The Wraith",
+                "sound": "sfx/deltawhip.wav",
+                "content": "<cr><s100>WHAT IS WRONG WITH YOU?</s></c>"
+            }
+        ]
+    },
+
+    "reward_you_4": {
+        "background": "purple",
+        "messages": [
+            {
+                "icon": 54,
+                "name": "The Wraith",
+                "content": "<...>"
+            }
+        ]
+    }
+}

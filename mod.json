@@ -6,11 +6,15 @@
 	},
 	"id": "colon.customtextboxes",
 	"name": "Custom Textboxes",
-	"version": "v1.0.1",
+	"version": "v1.0.2",
 	"developer": "Colon",
 	"description": "Display custom popups, chests, and more",
 	"resources": {
 		"files": ["defaults/*.json"]
+	},
+	"tags": ["universal", "offline", "interface"],
+	"links": {
+		"source": "https://github.com/GDColon/Custom-Textboxes"
 	},
 	"dependencies": {
 		"geode.node-ids": { "version": ">=1.20.0", "importance": "required" },

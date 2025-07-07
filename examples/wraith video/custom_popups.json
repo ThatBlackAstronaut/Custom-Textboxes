@@ -1,0 +1,160 @@
+{
+    "to-show": "rattledash_question",
+    "to-show-alt": "choose_reward",
+
+    "rattledash_question": {
+        "background": "purple",
+        "title": "Have you seen them?",
+        "content": "Do you know who <cl>Rattledash</c> is talking about?",
+        "button": {
+            "text": "Yes",
+            "onClick": { "spawnDialogue": "rattledash_yes" }
+        },
+        "button2": {
+            "text": "No",
+            "background": "red",
+            "onClick": [
+                { "spawnDialogue": "rattledash_no_1", "ignore": true },
+                { "spawnDialogue": "rattledash_no_2" }
+            ]
+        }
+    },
+
+    "who_is_rattledash": {
+        "background": "geode",
+        "title": "Who is Rattledash?",
+        "content": "Seriously, who is that?",
+        "sound": "sfx/question.mp3",
+        "button": {
+            "content": {
+                "text": "the skeleton in the tower\nwho says \"well met\" and\nthen you blow him up later",
+                "scale": 0.35
+            },
+            "height": 40,
+            "onClick": { "spawnDialogue": "wraith_rattledash" }
+        },
+        "button2": {
+            "text": "My friend",
+            "width": 100,
+            "scale": 0.75,
+            "onClick": [
+                { "spawnDialogue": "wraith_rattledash" }
+            ]
+        }
+    },
+
+    "kill_diamond": {
+        "type": "shop",
+        "background": "purple",
+        "title": "Kill him?",
+        "customTexture": {"name": "dialogIcon_047.png", "scale": 0.75},
+        "content": "Do you want to <cr>kill</c> the\n<cl>Diamond Shopkeeper</c>?",
+        "button": {
+            "content": { "text": "Yes", "scale": 0.6 },
+            "onClick": {
+                "playSound": "sfx/mizu5.wav",
+                "spawnPopup": "kill_confirm",
+                "pauseMusic": true
+            }
+        },
+        "button2": {
+            "content": { "text": "No", "scale": 0.6 },
+            "onClick": { "spawnDialogue": "wraith_portal" }
+        },
+        "sound": "sfx/gunload.wav"
+    },
+
+    "kill_confirm": {
+        "title": "Warning",
+        "content": "After this action, <cl>Diamond Shopkeeper</c> will temporarily stop appearing in the \"real world.\"\n<cr>Would you like to continue?</c>",
+        "button2": {
+            "text": "Proceed", "background": "cyan", "pulse": { "speed": 0.5, "size": 1.05 },
+            "onClick": {
+                "instantSound": "sfx/gunshot.mp3",
+                "delay": 0.85,
+                "spawnPopup": "kill_success", "pauseMusic": true
+            }
+        },
+        "button": {
+            "text": "Cancel",
+            "onClick": { "spawnDialogue": "wraith_portal", "pauseMusic": false }
+        }
+    },
+
+    "kill_success": {
+        "title": "It's murder",
+        "content": "The <cl>Diamond Shopkeeper</c> is dead.",
+        "button": {
+            "text": "OK",
+            "onClick": { "spawnDialogue": "wraith_portal", "pauseMusic": false }
+        }
+    },
+
+    "wraith_help": {
+        "background": "brown",
+        "title": "what is going on",
+        "content": "Lend a hand?",
+        "sound": "sfx/question.mp3",
+        "button": {
+            "text": "Nope",
+            "background": "red",
+            "x": 0,
+            "onClick": {
+                "spawnDialogue": "wraith_wtf",
+                "playSound": { "name": "sfx/nope.wav", "volume": 0.5 }
+            }
+        },
+        "button2": {
+            "text": "Lancer",
+            "scale": 0.5,
+            "background": "cyan",
+            "x": 130,
+            "y": -10,
+            "pulse": { "size": 1.1, "speed": 0.9 },
+            "onClick": [
+                { "playSound": { "name": "sfx/splat.wav", "speed": 0 }, "ignore": true },
+                { "playSound": { "name": "sfx/splat.wav", "speed": 1 }, "ignore": true },
+                { "playSound": { "name": "sfx/splat.wav", "speed": 2 }, "ignore": true },
+                { "playSound": { "name": "sfx/splat.wav", "speed": 3 }, "ignore": true },
+                { "playSound": { "name": "sfx/splat.wav", "speed": 4 }, "ignore": true },
+                { "playSound": { "name": "sfx/splat.wav", "speed": 5 }, "ignore": true },
+                { "playSound": { "name": "sfx/splat.wav", "speed": 6 }, "ignore": true },
+                { "playSound": { "name": "sfx/splat.wav", "speed": 7 }, "ignore": true, "goto": 0 }
+            ]
+        }
+    },
+
+    "choose_reward": {
+        "type": "shop",
+        "background": "purple",
+        "title": "The Wraith",
+        "customTexture": {"name": "dialogIcon_054.png", "scale": 0.75},
+        "content": "What <cy>reward</c> would you like?",
+        "button": {
+            "content": { "text": "You.", "scale": 0.6 },
+            "background": "pink",
+            "width": 80,
+            "x": 50,
+            "onClick": [
+                { "spawnDialogue": "reward_you_1", "ignore": true, "playSound": { "name": "sfx/vineboom.wav", "volume": 0.5 } },
+                { "spawnDialogue": "reward_you_2", "ignore": true, "playSound": { "name": "sfx/vineboom.wav", "volume": 0.5, "speed": 2 } },
+                { "spawnDialogue": "reward_you_3", "ignore": true, "playSound": { "name": "sfx/vineboom.wav", "volume": 0.5, "speed": 4 } },
+                { "spawnDialogue": "reward_you_4", "ignore": true }
+            ]
+        },
+        "button2": {
+            "content": { "text": "1 orb", "scale": 0.6 },
+            "background": "cyan",
+            "width": 80,
+            "x": -50,
+            "onClick": { "spawnChest": "wraith_orb" }
+        }
+    },
+
+    "the_end": {
+        "title": "The end",
+        "content": "Install the <cy>Custom Textboxes</c> mod by <co>Colon</c> for more shenanigans like this.",
+        "button": "Bye :)"
+    }
+
+}

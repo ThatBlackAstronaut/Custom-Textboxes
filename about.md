@@ -15,6 +15,8 @@ Some of the things you can do include:
 
 The [full documentation](https://github.com/GDColon/Custom-Textboxes?tab=readme-ov-file#custom-textboxes) can be found on GitHub.
 
+<cy>Press SHIFT+ESC to close all active textboxes!</c>
+
 Please report any bugs/issues/crashes you come across, as it's possible I missed a few.
 
 Special thanks to Alphalaneous for helping me with some annoying parts.
