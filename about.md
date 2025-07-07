@@ -13,7 +13,7 @@ Some of the things you can do include:
 - Chain together textboxes to make an entire visual novel
 - <cy>And so much more!</c>
 
-The full documentation can be found on GitHub.
+The [full documentation](https://github.com/GDColon/Custom-Textboxes?tab=readme-ov-file#custom-textboxes) can be found on GitHub.
 
 Please report any bugs/issues/crashes you come across, as it's possible I missed a few.
 
