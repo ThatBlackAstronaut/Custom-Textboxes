@@ -65,5 +65,5 @@ build-*/
 
 # for me lol
 old/
-*.txt
-!CMakeLists.txt
+/*.txt
+/!CMakeLists.txt

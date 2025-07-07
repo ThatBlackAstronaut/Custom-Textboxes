@@ -1,0 +1,1 @@
+This is a texture pack folder! Load it with the Texture Loader mod.
