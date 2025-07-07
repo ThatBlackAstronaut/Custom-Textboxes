@@ -25,9 +25,11 @@ std::string altShowKey = "to-show-alt";
 // Create files if they don't exist
 void checkMissingFiles() {
 	Mod::get()->getConfigDir(); // create config folder if missing
-    if (!fs::exists(CustomAlert::jsonFilePath))		fs::copy_file(Mod::get()->getResourcesDir() / CustomAlert::jsonFileName, CustomAlert::jsonFilePath);
-	if (!fs::exists(CustomTextbox::jsonFilePath))	fs::copy_file(Mod::get()->getResourcesDir() / CustomTextbox::jsonFileName, CustomTextbox::jsonFilePath);
-	if (!fs::exists(CustomChest::jsonFilePath))		fs::copy_file(Mod::get()->getResourcesDir() / CustomChest::jsonFileName, CustomChest::jsonFilePath);
+	std::error_code ec;
+    if (!fs::exists(CustomAlert::jsonFilePath))		fs::copy_file(Mod::get()->getResourcesDir() / CustomAlert::jsonFileName, CustomAlert::jsonFilePath, ec);
+	if (!fs::exists(CustomTextbox::jsonFilePath))	fs::copy_file(Mod::get()->getResourcesDir() / CustomTextbox::jsonFileName, CustomTextbox::jsonFilePath, ec);
+	if (!fs::exists(CustomChest::jsonFilePath))		fs::copy_file(Mod::get()->getResourcesDir() / CustomChest::jsonFileName, CustomChest::jsonFilePath, ec);
+	if (ec) { log::error("Filesystem error: {}", ec.message()); }
 }
 
 void clearQueue() {
@@ -177,7 +179,6 @@ class $modify(CCKeyboardDispatcher) {
 	}
 };
 
-
-$execute {
+$on_mod(Loaded) {
 	checkMissingFiles();
 }

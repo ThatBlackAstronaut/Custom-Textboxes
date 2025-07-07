@@ -32,7 +32,7 @@ In most cases, you can also type `\n` to go to a new line
 
 General syntax for ALL FILES is:
 
-```json
+```jsonc
 {
     "to-show": "name",  // spawned when pressing hotkey
     "to-show-alt": "alt-name",  // spawned when holding alt and pressing hotkey
